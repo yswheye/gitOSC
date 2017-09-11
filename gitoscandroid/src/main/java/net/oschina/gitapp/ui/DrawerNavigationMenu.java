@@ -153,7 +153,7 @@ public class DrawerNavigationMenu extends Fragment implements OnClickListener {
     // 初始化界面控件
     private void initView(View view) {
         // 高亮发现菜单栏
-        highlightSelectedItem(menuItemExplore);
+        highlightSelectedItem(menuItemMyself);
         initBadgeView(view);
     }
 
@@ -164,6 +164,10 @@ public class DrawerNavigationMenu extends Fragment implements OnClickListener {
 
     public void highlightExplore() {
         highlightSelectedItem(menuItemExplore);
+    }
+
+    public void highlightMyself() {
+        highlightSelectedItem(menuItemMyself);
     }
 
     private void setSelected(View v, boolean selected) {

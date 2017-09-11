@@ -18,9 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.blueware.agent.android.BlueWare;
 import com.kymjs.rxvolley.client.HttpCallback;
-import com.umeng.analytics.MobclickAgent;
 
 import net.oschina.gitapp.AppContext;
 import net.oschina.gitapp.AppManager;
@@ -60,18 +58,18 @@ public class MainActivity extends AppCompatActivity implements
     final String CONTENT_TAG_MYSELF = "content_myself";
 
     final String CONTENTS[] = {
+            CONTENT_TAG_MYSELF,
             CONTENT_TAG_EXPLORE,
-            CONTENT_TAG_MYSELF
     };
 
     final String FRAGMENTS[] = {
+            MySelfViewPagerFragment.class.getName(),
             ExploreViewPagerFragment.class.getName(),
-            MySelfViewPagerFragment.class.getName()
     };
 
     final String TITLES[] = {
+            "我的",
             "发现",
-            "我的"
     };
 
     private DrawerNavigationMenu mMenu = DrawerNavigationMenu.newInstance();
@@ -96,8 +94,7 @@ public class MainActivity extends AppCompatActivity implements
         initView(savedInstanceState);
         AppManager.getAppManager().addActivity(this);
 
-        BlueWare.withApplicationToken("A97669647CD7FA558E6076201E5F97B322").start(getApplicationContext());
-        MobclickAgent.updateOnlineConfig(this);
+//        BlueWare.withApplicationToken("A97669647CD7FA558E6076201E5F97B322").start(getApplicationContext());
     }
 
     @Override
@@ -107,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements
             mActionBar.setTitle(mTitle);
         }
         if (mCurrentContentTag != null && mContext != null && mMenu != null) {
-            if (mCurrentContentTag.equalsIgnoreCase(CONTENTS[1])) {
+            if (mCurrentContentTag.equalsIgnoreCase(CONTENTS[0])) {
                 if (!mContext.isLogin()) {
                     onClickExplore();
                     mMenu.highlightExplore();
@@ -135,11 +132,10 @@ public class MainActivity extends AppCompatActivity implements
             ft.replace(R.id.main_slidingmenu_frame, mMenu, DRAWER_MENU_TAG).commit();
 
             changeFragment(R.id.main_content, new MySelfViewPagerFragment());
-            changeFragment(R.id.main_content, new ExploreViewPagerFragment());
 
-            mTitle = "发现";
+            mTitle = TITLES[0];
             mActionBar.setTitle(mTitle);
-            mCurrentContentTag = CONTENT_TAG_EXPLORE;
+            mCurrentContentTag = CONTENT_TAG_MYSELF;
         }
     }
 
@@ -289,7 +285,7 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     public void onClickExplore() {
-        showMainContent(0);
+        showMainContent(1);
     }
 
     @Override
@@ -297,7 +293,7 @@ public class MainActivity extends AppCompatActivity implements
         if (!mContext.isLogin()) {
             UIHelper.showLoginActivity(this);
         } else {
-            showMainContent(1);
+            showMainContent(0);
         }
     }
 

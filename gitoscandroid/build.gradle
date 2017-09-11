@@ -12,6 +12,7 @@ android {
         versionName rootProject.ext.versionName
     }
 
+
     buildTypes {
         debug {
             minifyEnabled true
@@ -27,17 +28,17 @@ android {
 
     signingConfigs {
         debug {
-            storeFile file(propertyStoreFileStr)
-            storePassword propertyStorePwdStr
-            keyAlias propertyKeyAliasStr
-            keyPassword propertyKeyPwdStr
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
         }
 
         release {
-            storeFile file(propertyStoreFileStr)
-            storePassword propertyStorePwdStr
-            keyAlias propertyKeyAliasStr
-            keyPassword propertyKeyPwdStr
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
         }
     }
 
@@ -65,6 +66,11 @@ android {
         exclude 'META-INF/LICENSE'
         exclude 'META-INF/LICENSE.txt'
     }
+
+    lintOptions {
+        abortOnError false
+    }
+
 }
 
 dependencies {
@@ -72,18 +78,16 @@ dependencies {
     //noinspection GradleDependency
     compile 'com.jakewharton:butterknife:6.1.0'
     //noinspection GradleDependency
-    compile 'com.github.chrisbanes.photoview:library:1.2.3'
+    compile 'com.android.support:appcompat-v7:23.4.0'
     //noinspection GradleDependency
-    compile 'com.umeng.analytics:analytics:5.5.2'
+    compile 'pub.devrel:easypermissions:1.0.0'
+    compile 'com.kymjs.rxvolley:rxvolley:1.1.4'
+    compile 'com.kymjs.rxvolley:okhttp:1.1.4'
+    compile 'com.kymjs.rxvolley:bitmapcore:1.1.4'
     //noinspection GradleDependency
-    compile 'com.android.support:appcompat-v7:23.1.1'
-    //noinspection GradleDependency
-    compile 'pub.devrel:easypermissions:0.1.7'
-    compile 'com.kymjs.rxvolley:rxvolley:1.0.7'
-    compile 'com.kymjs.rxvolley:okhttp:1.0.7'
-    compile 'com.kymjs.rxvolley:bitmapcore:1.0.7'
-    //noinspection GradleDependency
-    compile 'com.android.support:design:23.3.0'
+    compile 'com.android.support:design:23.4.0'
     //noinspection GradleDependency
     compile 'com.github.bumptech.glide:glide:3.7.0'
+    //
+    compile 'com.github.chrisbanes.photoview:library:1.2.3'
 }

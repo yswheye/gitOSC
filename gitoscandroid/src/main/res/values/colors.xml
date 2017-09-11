@@ -20,8 +20,8 @@
     <color name="pressed_gitlab">#CC30A1BA</color>
     <color name="slidingmenu_bg">#212121</color>
 
-    <color name="colorPrimary">#282828</color>
-    <color name="colorPrimaryDark">#515252</color>
+    <color name="colorPrimary">#01508A</color>
+    <color name="colorPrimaryDark">#01508A</color>
     <color name="background">#F9F9F9</color>
     <color name="background_selected">#E8E8E8</color>
 

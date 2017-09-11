@@ -1,118 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-
-    <LinearLayout
-        android:id="@+id/menu_item_explore"
-        style="@style/MenuItemLayoutStyle" >
-
-        <ImageView
-            style="@style/MenuItemImageViewStyle"
-            android:contentDescription="@string/img_description"
-            android:background="@drawable/menu_icon_explore" />
-
-        <TextView
-            style="@style/MenuItemTextViewStyle"
-            android:text="@string/main_menu_title_explore" />
-    </LinearLayout>
-
-    <include layout="@layout/horizontal_divider_view" />
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/menu_item_myself"
-        style="@style/MenuItemLayoutStyle" >
+        style="@style/MenuItemLayoutStyle">
 
         <ImageView
             style="@style/MenuItemImageViewStyle"
-            android:contentDescription="@string/img_description"
-            android:background="@drawable/menu_icon_my" />
-
-        <TextView
-            style="@style/MenuItemTextViewStyle"
-            android:text="@string/main_menu_title_myself" />
-    </LinearLayout>
-
-    <include layout="@layout/horizontal_divider_view" />
-
-    <LinearLayout
-        android:id="@+id/menu_item_language"
-        style="@style/MenuItemLayoutStyle" >
-
-        <ImageView
-            style="@style/MenuItemImageViewStyle"
-            android:contentDescription="@string/img_description"
-            android:background="@drawable/menu_icon_language" />
-
-        <TextView
-            style="@style/MenuItemTextViewStyle"
-            android:text="@string/main_menu_title_language" />
-    </LinearLayout>
-
-    <include layout="@layout/horizontal_divider_view" />
-
-    <LinearLayout
-        android:id="@+id/menu_item_shake"
-        style="@style/MenuItemLayoutStyle" >
-
-        <ImageView
-            style="@style/MenuItemImageViewStyle"
-            android:contentDescription="@string/img_description"
-            android:background="@drawable/menu_icon_shark" />
-
-        <TextView
-            style="@style/MenuItemTextViewStyle"
-            android:text="@string/main_menu_title_shake" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/menu_item_scan"
-        android:visibility="gone"
-        style="@style/MenuItemLayoutStyle" >
-
-        <ImageView
-            style="@style/MenuItemImageViewStyle"
-            android:contentDescription="@string/img_description"
-            android:background="@drawable/menu_icon_shark" />
-
-        <TextView
-            style="@style/MenuItemTextViewStyle"
-            android:text="@string/main_menu_title_scan" />
-    </LinearLayout>
-
-    <include layout="@layout/horizontal_divider_view" />
-
-    <LinearLayout
-        android:id="@+id/menu_item_setting"
-        style="@style/MenuItemLayoutStyle" >
-
-        <ImageView
-            style="@style/MenuItemImageViewStyle"
-            android:contentDescription="@string/img_description"
-            android:background="@drawable/menu_icon_set" />
-
-        <TextView
-            style="@style/MenuItemTextViewStyle"
-            android:text="@string/main_menu_title_setting" />
-    </LinearLayout>
-
-    <include layout="@layout/horizontal_divider_view" />
-
-    <LinearLayout
-        android:id="@+id/menu_item_feedback"
-        style="@style/MenuItemLayoutStyle" >
-
-        <ImageView
-            style="@style/MenuItemImageViewStyle"
-            android:src="@drawable/menu_icon_feedback"
+            android:background="@drawable/menu_icon_my"
             android:contentDescription="@string/img_description"/>
 
         <TextView
             style="@style/MenuItemTextViewStyle"
-            android:text="@string/main_menu_title_feedback" />
+            android:text="@string/main_menu_title_myself"/>
     </LinearLayout>
 
-    <include layout="@layout/horizontal_divider_view" />
+    <include layout="@layout/horizontal_divider_view"/>
+
+    <LinearLayout
+        android:id="@+id/menu_item_explore"
+        style="@style/MenuItemLayoutStyle">
+
+        <ImageView
+            style="@style/MenuItemImageViewStyle"
+            android:background="@drawable/menu_icon_explore"
+            android:contentDescription="@string/img_description"/>
+
+        <TextView
+            style="@style/MenuItemTextViewStyle"
+            android:text="@string/main_menu_title_explore"/>
+    </LinearLayout>
+
+    <include layout="@layout/horizontal_divider_view"/>
+
+    <LinearLayout
+        android:id="@+id/menu_item_language"
+        style="@style/MenuItemLayoutStyle">
+
+        <ImageView
+            style="@style/MenuItemImageViewStyle"
+            android:background="@drawable/menu_icon_language"
+            android:contentDescription="@string/img_description"/>
+
+        <TextView
+            style="@style/MenuItemTextViewStyle"
+            android:text="@string/main_menu_title_language"/>
+    </LinearLayout>
+
+    <include layout="@layout/horizontal_divider_view"/>
+
+    <LinearLayout
+        android:id="@+id/menu_item_shake"
+        style="@style/MenuItemLayoutStyle">
+
+        <ImageView
+            style="@style/MenuItemImageViewStyle"
+            android:background="@drawable/menu_icon_shark"
+            android:contentDescription="@string/img_description"/>
+
+        <TextView
+            style="@style/MenuItemTextViewStyle"
+            android:text="@string/main_menu_title_shake"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_item_scan"
+        style="@style/MenuItemLayoutStyle"
+        android:visibility="gone">
+
+        <ImageView
+            style="@style/MenuItemImageViewStyle"
+            android:background="@drawable/menu_icon_shark"
+            android:contentDescription="@string/img_description"/>
+
+        <TextView
+            style="@style/MenuItemTextViewStyle"
+            android:text="@string/main_menu_title_scan"/>
+    </LinearLayout>
+
+    <include layout="@layout/horizontal_divider_view"/>
+
+    <LinearLayout
+        android:id="@+id/menu_item_setting"
+        style="@style/MenuItemLayoutStyle">
+
+        <ImageView
+            style="@style/MenuItemImageViewStyle"
+            android:background="@drawable/menu_icon_set"
+            android:contentDescription="@string/img_description"/>
+
+        <TextView
+            style="@style/MenuItemTextViewStyle"
+            android:text="@string/main_menu_title_setting"/>
+    </LinearLayout>
+
+    <include layout="@layout/horizontal_divider_view"/>
+
+    <LinearLayout
+        android:id="@+id/menu_item_feedback"
+        style="@style/MenuItemLayoutStyle">
+
+        <ImageView
+            style="@style/MenuItemImageViewStyle"
+            android:contentDescription="@string/img_description"
+            android:src="@drawable/menu_icon_feedback"/>
+
+        <TextView
+            style="@style/MenuItemTextViewStyle"
+            android:text="@string/main_menu_title_feedback"/>
+    </LinearLayout>
+
+    <include layout="@layout/horizontal_divider_view"/>
 
 </LinearLayout>
