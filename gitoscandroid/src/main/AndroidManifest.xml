@@ -172,14 +172,6 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
-        <!-- ###################添加UmengAppkey###################### -->
-        <meta-data
-            android:name="UMENG_APPKEY"
-            android:value="53ce746f56240bfb4105762d" />
-        <meta-data
-            android:name="UMENG_CHANNEL"
-            android:value="osc" />
-
         <activity
             android:name=".ui.FeedbackActivity"
             android:screenOrientation="portrait"
